@@ -23,7 +23,7 @@ jobs:
         run: |
           git clone https://github.com/riscv/riscv-gnu-toolchain
           cd riscv-gnu-toolchain
-          ./configure --prefix=/opt/riscv --enable-llvm --disable-linux-- with-arch=rv32gcv --with-abi=ilp32d --with-cmodel=medany
+          ./configure --prefix=/opt/riscv --enable-llvm --disable-linux --with-arch=rv32gcv --with-abi=ilp32d --with-cmodel=medany
           make -j $(nproc) all
 
       - name: Upload Artifact
